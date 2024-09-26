@@ -1,4 +1,3 @@
-from models import TargetType
 from repository.target_type_epository import *
 from returns.result import Result, Success, Failure
 from returns.maybe import Nothing, Some

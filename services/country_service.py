@@ -1,4 +1,3 @@
-from models import Country
 from repository.country_reposiitory import *
 from returns.result import Result, Success, Failure
 from returns.maybe import Nothing, Some

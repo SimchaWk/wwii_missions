@@ -1,4 +1,3 @@
-from models import City
 from repository.city_epository import *
 from returns.result import Result, Success, Failure
 from returns.maybe import Nothing, Some

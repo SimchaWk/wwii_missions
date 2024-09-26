@@ -1,4 +1,3 @@
-from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy_utils import database_exists, create_database
@@ -26,4 +25,3 @@ def drop_all_tables():
         Base.metadata.drop_all(bind=engine)
     except Exception as e:
         print(f"Error occurred while dropping tables: {str(e)}")
-

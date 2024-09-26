@@ -1,4 +1,4 @@
-from typing import List, Dict, Optional
+from typing import List, Dict
 from sqlalchemy import text
 from returns.maybe import Maybe, Some, Nothing
 

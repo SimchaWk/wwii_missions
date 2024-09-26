@@ -1,7 +1,6 @@
-from models import Target
 from repository.target_epository import *
 from returns.result import Result, Success, Failure
-from returns.maybe import Nothing, Some
+from returns.maybe import Some
 from dictalchemy.utils import asdict
 from toolz import curry
 

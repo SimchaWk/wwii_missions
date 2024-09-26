@@ -1,6 +1,4 @@
-from config.base import engine, Base, create_database_if_not_exists, drop_all_tables
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy_utils import database_exists, create_database
+from config.base import engine, Base, create_database_if_not_exists
 from sqlalchemy import text, inspect
 
 from config.base import session_factory
@@ -80,6 +78,6 @@ def normalize_data():
 
 if __name__ == "__main__":
     create_database_if_not_exists()
-    # drop_all_tables()  # זהירות: זה ימחק את כל הטבלאות הקיימות
+    # drop_all_tables()
     create_tables()
     normalize_data()
