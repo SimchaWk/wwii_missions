@@ -1,3 +1,4 @@
+from dictalchemy import asdict
 from returns.result import Result, Success, Failure
 from returns.maybe import Maybe
 from sqlalchemy.exc import SQLAlchemyError
@@ -63,3 +64,7 @@ def get_all_targets() -> Result[list[Target], str]:
             return Success(targets)
         except SQLAlchemyError as e:
             return Failure(f'Error retrieving targets: {str(e)}')
+
+
+def serialize_targets(targets):
+    return [asdict(target) for target in targets]
