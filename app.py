@@ -19,7 +19,6 @@ if __name__ == '__main__':
     create_database_if_not_exists()
     # drop_all_tables()
     create_tables()
-    # setup_database_with_data()
 
     app = create_app()
     app.run(debug=True)
