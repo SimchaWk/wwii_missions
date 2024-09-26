@@ -1,24 +1,23 @@
-# NBA Fantasy Team Manager
+# WWII Missions Database Project
 
-This is an app for displaying NBA player performance data 
-and displaying statistical calculations about player performance 
-and managing fantasy teams in the NBA.
+This is an application for managing and displaying data about World War II aerial bombing missions. It provides
+statistical calculations and management of mission-related information.
 
 ## What it does
 
-- Gets NBA player info from External API
-- Inserting data into a PostgreSQL database
-- Calculation and presentation of statistical data about the players' performance
-- You can make your own fantasy team
+- Stores and manages data about WWII aerial bombing missions
+- Inserts and retrieves data from a PostgreSQL database
+- Provides statistical calculations about mission performance
+- Allows management of countries, cities, targets, and mission details
 
 ## How to use it
 
-1. Make sure you have Python and PostgreSQL
+1. Make sure you have Python and PostgreSQL installed
 
 2. Copy the project to your computer:
    ```
-   git clone https://github.com/your-username/nba-fantasy-team-manager.git
-   cd nba-fantasy-team-manager
+   git clone https://github.com/SimchaWk/wwii_missions.git
+   ccd wwii-missions
    ```
 
 3. Installing the required libraries to run the project:
@@ -26,10 +25,10 @@ and managing fantasy teams in the NBA.
    pip install -r requirements.txt
    ```
 
-4. Set up the database (you might need to change some settings):
+4. Set up the database (Not required, can be created by running the software):
    ```
    Use the relevant commands in CMD
-   Database name: nba_teams
+   Database name: wwii_missions
    ```
 
 5. Start the app:
@@ -41,10 +40,21 @@ and managing fantasy teams in the NBA.
 
 ## Things you can do
 
-- Look for players: `/api/players/?position={SF}`
-- Make a new team: `/api/teams` (you need to send some data)
-- See team info: `/api/teams/1` (1 is the team number)
-- Change a team: `/api/teams/1` (send new data)
-- Delete a team: `/api/teams/1`
-- Compare teams: `/api/teams/compare?team1=1&team2=2`
+- Get all missions: `GET /missions`
+- Get a specific mission: `GET /missions/<id>`
+- Create a new country: `POST /countries` (you need to send some data)
+- Get country info: `GET /countries/<id>`
+- Update a country: `PUT /countries/<id>` (send new data)
+- Delete a country: `DELETE /countries/<id>`
+- Get cities by country: `GET /cities?country_id=<id>`
+- Create a new target: `POST /targets` (you need to send some data)
+- Get targets by priority: `GET /targets?priority=<priority>`
+- Update a target: `PUT /targets/<id>` (send new data)
+- Delete a target: `DELETE /targets/<id>`
 
+## Additional Information
+
+- The project uses Flask for the web framework
+- SQLAlchemy is used for database operations
+- The `returns` library is used for functional programming concepts
+- Error handling and input validation are implemented throughout the application
